@@ -29,7 +29,7 @@ export class List extends Component {
   }
 
   describeToEvents = () => {
-    const io = socket('http://localhost:3000');
+    const io = socket('https://servicoexterno-backend.herokuapp.com/');
 
     io.on('servico', data => {
       this.setState({ servicos: [...this.state.servicos, data] });
